@@ -1,0 +1,45 @@
+.explode {
+  width: 150px;
+  height: 150px;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.1s linear;
+  perspective: 800px;
+  transform: rotateY(30deg);
+}
+
+.explode .face {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+
+  border: 2px solid var(--primary);
+
+  filter: drop-shadow(0px 0px 10px var(--primary))
+    drop-shadow(0px 0px 20px var(--primary));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 16px;
+  transition: transform 0.1s linear;
+}
+
+.explode .front {
+  transform: translateZ(75px);
+}
+.explode .back {
+  transform: rotateY(180deg) translateZ(75px);
+}
+.explode .right {
+  transform: rotateY(90deg) translateZ(75px);
+}
+.explode .left {
+  transform: rotateY(-90deg) translateZ(75px);
+}
+.explode .top {
+  transform: rotateX(90deg) translateZ(75px);
+}
+.explode .bottom {
+  transform: rotateX(-90deg) translateZ(75px);
+}

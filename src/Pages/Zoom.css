@@ -1,0 +1,45 @@
+.zoom-scene {
+  width: 100vw;
+  height: 150vh;
+  background-color: transparent;
+}
+
+.zoom-cube {
+  width: 150px;
+  height: 150px;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.1s linear;
+}
+
+.zoom .face {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+
+  border: 2px solid var(--primary);
+
+  filter: drop-shadow(0px 0px 10px var(--primary))
+    drop-shadow(0px 0px 20px var(--primary));
+  display: flex;
+  justify-content: center;
+}
+
+.zoom .front {
+  transform: translateZ(75px);
+}
+.zoom .back {
+  transform: rotateY(180deg) translateZ(75px);
+}
+.zoom .right {
+  transform: rotateY(90deg) translateZ(75px);
+}
+.zoom .left {
+  transform: rotateY(-90deg) translateZ(75px);
+}
+.zoom .top {
+  transform: rotateX(90deg) translateZ(75px);
+}
+.zoom .bottom {
+  transform: rotateX(-90deg) translateZ(75px);
+}

@@ -1,0 +1,30 @@
+.room line,
+.room polygon,
+.room rect {
+  fill: transparent;
+
+  stroke: var(--primary);
+  stroke-miterlimit: 10;
+  stroke-width: 0.25px;
+}
+.room {
+  filter: drop-shadow(
+      0px 0px 10px color-mix(in srgb, var(--primary) 55%, transparent)
+    )
+    drop-shadow(
+      0px 0px 20px color-mix(in srgb, var(--primary) 25%, transparent)
+    );
+}
+.morph4-scroll-container {
+  width: 100vw;
+  height: 150vh;
+  transform: translate(0, -50vh);
+}
+
+.svg-morphing4-container {
+  position: fixed;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

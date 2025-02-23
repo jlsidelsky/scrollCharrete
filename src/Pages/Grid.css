@@ -1,0 +1,20 @@
+.grid-line {
+  border: 2px solid var(--primary);
+}
+.grid {
+  filter: drop-shadow(
+      0px 0px 10px color-mix(in srgb, var(--primary) 55%, transparent)
+    )
+    drop-shadow(
+      0px 0px 20px color-mix(in srgb, var(--primary) 25%, transparent)
+    );
+}
+
+@keyframes drawGrid {
+  0% {
+    background-size: 100vw 0, 0 100vh;
+  }
+  100% {
+    background-size: 100vw 100vh, 100vw 100vh;
+  }
+}

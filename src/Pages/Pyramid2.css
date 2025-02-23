@@ -1,0 +1,45 @@
+.pyramid-scene {
+  perspective: 1000px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 100px auto;
+  height: 400px;
+}
+
+.pyramid {
+  transform-style: preserve-3d;
+  position: relative;
+  width: 0;
+  height: 0;
+}
+
+.pyramid .face {
+  position: absolute;
+  transform-origin: center bottom;
+}
+
+.pyramid .face polygon {
+  filter: drop-shadow(
+      0px 0px 10px color-mix(in srgb, var(--primary) 75%, transparent)
+    )
+    drop-shadow(
+      0px 0px 20px color-mix(in srgb, var(--primary) 75%, transparent)
+    );
+}
+
+.pyramid .front {
+  transform: rotateY(0deg) translateZ(100px) rotateX(30deg);
+}
+
+.pyramid .back {
+  transform: rotateY(180deg) translateZ(100px) rotateX(30deg);
+}
+
+.pyramid .left {
+  transform: rotateY(-90deg) translateZ(100px) rotateX(30deg);
+}
+
+.pyramid .right {
+  transform: rotateY(90deg) translateZ(100px) rotateX(30deg);
+}

@@ -1,0 +1,28 @@
+.morphing-scene {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  perspective: 1000px;
+  position: relative;
+}
+
+.morph {
+  width: 150px;
+  height: 150px;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.3s ease-out, border-radius 0.3s ease-out;
+
+  transform: rotateX(15deg) rotateY(60deg);
+}
+
+.morph .face {
+  position: absolute;
+  border: 2px solid var(--primary);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  filter: drop-shadow(0px 0px 10px var(--primary))
+    drop-shadow(0px 0px 20px var(--primary));
+}
